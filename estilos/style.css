@@ -1,8 +1,7 @@
 @charset "UTF-8";
 
-:root {
-    --verde: #49a09d;
-    --roxo: #5f2c82;
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 1;
 }
 
 * {
@@ -13,7 +12,7 @@
 }
 
 html, body {
-    background-color: var(--roxo);
+    background-color: rgb(70, 70, 70);
     width: 100vw;
     height: 100vh;
 }
@@ -29,17 +28,21 @@ section#login {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);    
-    width: 250px;
+    width: 260px;
     height: 500px;
+    
     border-radius: 20px;
     overflow: hidden;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    
+    transition: width 0.2s, height 0.3s;
+    transition-timing-function: ease;
 }
 
 div#imagem {
     display: block;
-    background: var(--roxo) url('../imagens/entrada.jpg') bottom center;
+    background: rgb(70, 70, 70) url('../imagens/entrada.jpg') bottom;
     background-size: cover;
     height: 200px;
 }
@@ -47,4 +50,13 @@ div#imagem {
 div#formulario {
     display: block;
     padding: 10px;
+}
+
+div#formulario h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#formulario p {
+    font-size: 0.8em;
 }

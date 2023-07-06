@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .material-symbols-outlined {
-  font-variation-settings: 'FILL' 1;
+    font-variation-settings: 'FILL' 1;
 }
 
 * {
@@ -12,60 +12,77 @@
 }
 
 html, body {
+    position: relative;
     background-color: rgb(70, 70, 70);
     width: 100vw;
     height: 100vh;
 }
 
-main {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-}
-
-section#login {
+section.login {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);    
     width: 260px;
-    height: 500px;
-    
-    border-radius: 20px;
-    overflow: hidden;
+    height: 535px;
+
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
-    
-    transition: width 0.2s, height 0.3s;
+    border-radius: 20px;
+    overflow: hidden;
+
+    top: 50%;
+    left: 50%;
+    transition: width .3s, height .3s;
     transition-timing-function: ease;
+    transform: translate(-50%, -50%);
 }
 
-div#imagem {
-    display: block;
-    background: rgb(70, 70, 70) url('../imagens/entrada.jpg') bottom;
+div.imagem {
+    background: rgb(70, 70, 70) url('../imagens/entrada.jpg') bottom center;
     background-size: cover;
     height: 200px;
 }
 
-div#formulario {
-    display: block;
+div.formulario {
     padding: 10px;
 }
 
-div#formulario h1 {
+div.formulario > h1 {
     text-align: center;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
-div#formulario p {
-    font-size: 0.8em;
+div.formulario > p {
+    font-size: 0.9em;
+    padding-bottom: 10px;
 }
 
 div.campo {
     background-color: rgb(130, 130, 130);
-    border-radius: 7px;
+    width: 100%;
     height: 40px;
+    border-radius: 7px;
+    border: 2px solid rgb(130, 130, 130);
     margin: 5px 0px;
+}
+
+div.campo > span {
+    color: rgb(230, 230, 230);
+    font-size: 2em;
+    width: 40px;
+    height: 100%;
+    padding: 5px;
+}
+
+div.campo > input {
+    height: 100%;
+    width: calc(100% - 45px);
+    border-radius: 7px;
+    border: none;
+    padding: 6px;
+    transform: translateY(-14px);
+}
+
+div.campo > input:focus-within {
+    background-color: rgb(230, 230, 230);
 }
 
 div.campo > label {
@@ -74,15 +91,15 @@ div.campo > label {
 
 form > input[type=submit] {
     display: block;
-    font-size: 1em;
-    font-weight: bolder;
     width: 100%;
     height: 40px;
-    background-color: rgb(130, 130, 130);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-    color: white;
-    border: 0.5px solid rgb(70, 70, 70);
     border-radius: 7px;
+    border: 0.5px solid rgb(70, 70, 70);
+    background-color: rgb(130, 130, 130);
+    color: white;
+    font-size: 1em;
+    font-weight: bolder;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
     cursor: pointer;
 }
 
@@ -92,16 +109,15 @@ form > input[type=submit]:hover {
 
 form > a.botao {
     display: block;
-    font-size: 1em;
-    text-align: center;
-    text-decoration: none;
-    color: black;
     width: 100%;
     height: 40px;
+    margin-top: 5px;
+    padding-top: 7px;
     border: 1px solid rgb(70, 70, 70);
     border-radius: 7px;
-    padding-top: 7px;
-    margin-top: 5px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
 }
 
 form > a.botao:hover {
